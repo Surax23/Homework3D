@@ -43,7 +43,11 @@ namespace Geekbrains
 				BatteryChargeCurrent -= Time.deltaTime;
 				return true;
 			}
-			return false;
+            else
+            {
+                BatteryChargeCurrent += Time.deltaTime;
+                return false;
+            }
 		}
 	}
 }

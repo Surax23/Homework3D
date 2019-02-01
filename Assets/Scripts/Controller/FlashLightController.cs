@@ -6,12 +6,14 @@ namespace Geekbrains
 	{
 		private FlashLightModel _flashLight;
 		private FlashLightUiText _flashLightUi;
+		private FlashLightUIImage _flashLightUIImage;
 
-		public FlashLightController()
+        public FlashLightController()
 		{
 			_flashLight = MonoBehaviour.FindObjectOfType<FlashLightModel>();
 			_flashLightUi = MonoBehaviour.FindObjectOfType<FlashLightUiText>();
-			Off();
+            _flashLightUIImage = MonoBehaviour.FindObjectOfType<FlashLightUIImage>();
+            Off();
 		}
 
 		public override void OnUpdate()
@@ -23,10 +25,11 @@ namespace Geekbrains
 			if (_flashLight.EditBatteryCharge())
 			{
 				_flashLightUi.Text = _flashLight.BatteryChargeCurrent;
-			}
+                _flashLightUIImage.Size(10, _flashLight.BatteryChargeCurrent);
+            }
 			else
 			{
-				Off();
+				//Off();
 			}
 		}
 
