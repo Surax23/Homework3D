@@ -17,5 +17,10 @@ namespace Geekbrains
         {
             _img.rectTransform.localScale = new Vector3(curr / curr_max, _img.rectTransform.localScale.y);
         }
+
+        public void SetActive(bool value)
+        {
+            _img.gameObject.SetActive(value);
+        }
     }
 }
