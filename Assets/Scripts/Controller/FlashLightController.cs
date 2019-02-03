@@ -38,7 +38,7 @@ namespace Geekbrains
 			if (IsActive)return;
 			base.On();
 			_flashLight.Switch(true);
-			_flashLightUi.SetActive(true);
+			//_flashLightUi.SetActive(true);
 		}
 
 		public sealed override void Off()
@@ -46,7 +46,7 @@ namespace Geekbrains
 			if (!IsActive) return;
 			base.Off();
 			_flashLight.Switch(false);
-			_flashLightUi.SetActive(false);
+			//_flashLightUi.SetActive(false);
 		}
 	}
 }
