@@ -36,18 +36,19 @@ namespace Geekbrains
 				_goFollow.rotation, _speed * Time.deltaTime);
 		}
 
-		public bool EditBatteryCharge()
+		public bool EditBatteryCharge(bool _switch)
 		{
-			if (BatteryChargeCurrent > 0)
-			{
-				BatteryChargeCurrent -= Time.deltaTime;
-				return true;
-			}
+            if (BatteryChargeCurrent > 0 && _switch)
+            {
+                BatteryChargeCurrent -= Time.deltaTime;
+                return true;
+            }
             else
+            if (BatteryChargeCurrent < _batteryChargeMax && !_switch)
             {
                 BatteryChargeCurrent += Time.deltaTime;
-                return false;
             }
+            return false;
 		}
 	}
 }

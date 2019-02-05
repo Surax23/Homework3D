@@ -67,10 +67,12 @@
     <Compile Include="Assets\Scripts\Controller\FlashLightController.cs" />
     <Compile Include="Assets\Scripts\Controller\InputController.cs" />
     <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Controller\RayCastController.cs" />
     <Compile Include="Assets\Scripts\Interface\IMotor.cs" />
     <Compile Include="Assets\Scripts\Main.cs" />
     <Compile Include="Assets\Scripts\Model\BaseObjectScene.cs" />
     <Compile Include="Assets\Scripts\Model\FlashLightModel.cs" />
+    <Compile Include="Assets\Scripts\Model\RayCastModel.cs" />
     <Compile Include="Assets\Scripts\Model\UnitMotor.cs" />
     <Compile Include="Assets\Scripts\View\FlashLightUIImage.cs" />
     <Compile Include="Assets\Scripts\View\FlashLightUiText.cs" />
